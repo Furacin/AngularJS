@@ -25,7 +25,34 @@
             <div>
                 <img ng-src="{{product.images[0].full}}" />
             </div>
-            <button> Add to Cart</button>
+<!--            <button> Add to Cart</button>-->
+            <section ng-controller="PanelController as panel">
+                <ul class="nav nav-pills">
+                    <li ng-class="{active: panel.isSelected(1)}">
+                        <a href ng-click="panel.selectedTab(1)">Description</a> 
+                    </li>
+                    <li ng-class="{active: panel.isSelected(2)}"> 
+                        <a href ng-click="panel.selectedTab(2)">Specifications</a> 
+                    </li>
+                    <li ng-class="{active: panel.isSelected(3)}"> 
+                        <a href ng-click="panel.selectedTab(3)">Reviews</a> 
+                    </li>
+                </ul>
+                
+                <div class = "panel" ng-show="panel.isSelected(1)">
+                    <h4>Description</h4>
+                    <p>{{product.description}}</p>
+                </div>
+                <div class = "panel" ng-show="panel.isSelected(2)">
+                    <h4>Specifications</h4>
+                    <p>None yet</p>
+                </div>
+                <div class = "panel" ng-show="panel.isSelected(3)">
+                    <h4>Reviews</h4>
+                    <p>None yet</p>
+                </div>
+                
+            </section>
         </div>
 <!--
         <ul class="list-group">
