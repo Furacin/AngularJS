@@ -8,3 +8,16 @@ button {
     margin-left: 80px;
     margin-top: 20px;
 }
+
+#products {
+    border:1px solid gray;
+    text-align: center;
+}
+
+section {
+    margin-left: 260px;
+}
+
+.panel {
+    margin-right: 245px;
+}
