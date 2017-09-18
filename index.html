@@ -19,8 +19,9 @@
     </head>
     <body ng-controller="StoreController as store">
         <div id="products" ng-repeat="product in store.products" style="width:800px; margin:0 auto;">
-            <h1> {{product.name}} </h1>
-            <h2> {{product.price}} </h2>
+            <h3>
+            <product-title></product-title>
+            </h3>
             <p> {{product.description}} </p>
             <div>
                 <img ng-src="{{product.images[0].full}}" />
